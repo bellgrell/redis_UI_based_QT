@@ -1,0 +1,14 @@
+# Dependencies
+# Redis server: https://github.com/bellgrell/mini-redis
+/build/
+*.o
+*.exe
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+.qmake.stash
+Makefile
+Makefile.Release
+Makefile.Debug
+object_script*
+*.pro.user

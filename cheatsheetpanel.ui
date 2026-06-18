@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CheatSheetPanel</class>
+ <widget class="QWidget" name="CheatSheetPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="cheatsheetLayout">
+   <property name="leftMargin">16</property>
+   <property name="topMargin">12</property>
+   <property name="rightMargin">16</property>
+   <property name="bottomMargin">12</property>
+   <property name="spacing">8</property>
+   <item>
+    <layout class="QHBoxLayout" name="cheatsheetHeader">
+     <item>
+      <widget class="QLabel" name="title">
+       <property name="text">
+        <string>Command Reference</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="badge">
+       <property name="text">
+        <string>50+ commands</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="filterLayout">
+     <item>
+      <widget class="QLineEdit" name="m_searchInput">
+       <property name="placeholderText">
+        <string>Search commands...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="m_groupFilter">
+       <item>
+        <property name="text">
+         <string>All Groups</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Connection</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Strings</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lists</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sets</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hashes</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sorted Sets</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Generic</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Server</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="contentLayout">
+     <item>
+      <widget class="QTreeWidget" name="m_commandTree">
+       <property name="headerHidden">
+        <bool>true</bool>
+       </property>
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="m_detailPanel" native="true">
+       <layout class="QVBoxLayout" name="detailLayout">
+        <property name="leftMargin">12</property>
+        <property name="topMargin">12</property>
+        <property name="rightMargin">12</property>
+        <property name="bottomMargin">12</property>
+        <property name="spacing">8</property>
+        <item>
+         <widget class="QLabel" name="m_detailName">
+          <property name="text">
+           <string>Select a command</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_detailSummary">
+          <property name="text"/>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_detailSyntax">
+          <property name="text"/>
+          <property name="textInteractionFlags">
+           <set>Qt::TextSelectableByMouse</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="m_detailGroup">
+          <property name="text"/>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="m_detailDesc">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>Select a command to see details</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

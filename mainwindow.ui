@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1100</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>mini-redis Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout" stretch="0,0,1">
+    <property name="leftMargin">0</property>
+    <property name="topMargin">0</property>
+    <property name="rightMargin">0</property>
+    <property name="bottomMargin">0</property>
+    <property name="spacing">0</property>
+    <item>
+     <widget class="QFrame" name="sidebar">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="leftMargin">8</property>
+       <property name="topMargin">12</property>
+       <property name="rightMargin">8</property>
+       <property name="bottomMargin">12</property>
+       <property name="spacing">8</property>
+       <item>
+        <widget class="QLabel" name="logoLabel">
+         <property name="text">
+          <string>⚡ mini-redis</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="connFrame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="connLayout">
+          <property name="leftMargin">0</property>
+          <property name="topMargin">4</property>
+          <property name="rightMargin">0</property>
+          <property name="bottomMargin">4</property>
+          <property name="spacing">4</property>
+          <item>
+           <layout class="QHBoxLayout" name="hostPortLayout">
+            <item>
+             <widget class="QLineEdit" name="m_hostEdit">
+              <property name="text">
+               <string>127.0.0.1</string>
+              </property>
+              <property name="placeholderText">
+               <string>Host</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="m_portSpin">
+              <property name="minimum">1</property>
+              <property name="maximum">65535</property>
+              <property name="value">6379</property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="m_statusLabel">
+            <property name="text">
+             <string>🔴 Disconnected</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="m_connectBtn">
+            <property name="text">
+             <string>Connect</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="m_navList">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string>▸ Console</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>▸ Keys</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>▸ Server Info</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>▸ Monitor</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>▸ Cheat Sheet</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="separator">
+      <property name="frameShape">
+       <enum>QFrame::VLine</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="m_stackedWidget">
+      <property name="currentIndex">0</property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1100</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

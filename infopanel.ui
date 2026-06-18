@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InfoPanel</class>
+ <widget class="QWidget" name="InfoPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="infoLayout">
+   <property name="leftMargin">16</property>
+   <property name="topMargin">12</property>
+   <property name="rightMargin">16</property>
+   <property name="bottomMargin">12</property>
+   <property name="spacing">8</property>
+   <item>
+    <layout class="QHBoxLayout" name="infoHeader">
+     <item>
+      <widget class="QLabel" name="m_title">
+       <property name="text">
+        <string>Server Info</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="headerSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_refreshBtn">
+       <property name="text">
+        <string>🔄 Refresh</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPlainTextEdit" name="m_output">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>Click Refresh or run INFO in Console</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

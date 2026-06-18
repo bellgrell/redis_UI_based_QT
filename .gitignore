@@ -1,5 +1,4 @@
-# Dependencies
-# Redis server: https://github.com/bellgrell/mini-redis
+# Build artifacts
 /build/
 *.o
 *.exe
@@ -12,3 +11,5 @@ Makefile.Release
 Makefile.Debug
 object_script*
 *.pro.user
+release/
+debug/

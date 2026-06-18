@@ -3,34 +3,36 @@ CONFIG   += c++17
 TARGET    = mini-redis-ui
 TEMPLATE  = app
 
+INCLUDEPATH += include
+
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    consolepanel.cpp \
-    keybrowserpanel.cpp \
-    infopanel.cpp \
-    monitorpanel.cpp \
-    cheatsheetpanel.cpp \
-    redisclient.cpp \
-    resparser.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/consolepanel.cpp \
+    src/keybrowserpanel.cpp \
+    src/infopanel.cpp \
+    src/monitorpanel.cpp \
+    src/cheatsheetpanel.cpp \
+    src/redisclient.cpp \
+    src/resparser.cpp
 
 HEADERS += \
-    mainwindow.h \
-    consolepanel.h \
-    keybrowserpanel.h \
-    infopanel.h \
-    monitorpanel.h \
-    cheatsheetpanel.h \
-    redisclient.h \
-    resparser.h
+    include/mainwindow.h \
+    include/consolepanel.h \
+    include/keybrowserpanel.h \
+    include/infopanel.h \
+    include/monitorpanel.h \
+    include/cheatsheetpanel.h \
+    include/redisclient.h \
+    include/resparser.h
 
 FORMS += \
-    mainwindow.ui \
-    consolepanel.ui \
-    keybrowserpanel.ui \
-    infopanel.ui \
-    monitorpanel.ui \
-    cheatsheetpanel.ui
+    forms/mainwindow.ui \
+    forms/consolepanel.ui \
+    forms/keybrowserpanel.ui \
+    forms/infopanel.ui \
+    forms/monitorpanel.ui \
+    forms/cheatsheetpanel.ui
 
 RESOURCES += resources.qrc
 
